@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tavus-Conversation-App/static/css/main.5dedac37.css",
+    "main.js": "/Tavus-Conversation-App/static/js/main.071c1498.js",
+    "index.html": "/Tavus-Conversation-App/index.html",
+    "main.5dedac37.css.map": "/Tavus-Conversation-App/static/css/main.5dedac37.css.map",
+    "main.071c1498.js.map": "/Tavus-Conversation-App/static/js/main.071c1498.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5dedac37.css",
+    "static/js/main.071c1498.js"
+  ]
+}
