@@ -1,0 +1,173 @@
+.conversation-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.conversation-container {
+  display: flex;
+  height: 90vh;
+  width: 90vw;
+  max-width: 1400px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,186,141,0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.video-area {
+  flex: 2;
+  transition: flex 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-panel {
+  flex: 1;
+  min-width: 350px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #00BA8D;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: #00BA8D;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.chat-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chat-fab {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  background: #FFFFFF;
+  color: #00BA8D;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  box-shadow: 0 2px 12px rgba(0,186,141,0.18);
+  cursor: pointer;
+}
+
+.conversation-screen .video-area {
+  flex: 2;
+  display: flex;
+  align-items: center;       /* ✅ centers vertically */
+  justify-content: center;   /* ✅ centers horizontally */
+  background: #000;          /* optional for letterboxing */
+}
+
+.conversation-screen .video-area iframe,
+.conversation-screen .video-area video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ fills container without bars */
+}
+
+/* Chat header */
+.conversation-screen .chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #00BA8D; /* Isio green */
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  border-bottom: none; /* remove line */
+  border-radius: 0 18px 0 0;
+}
+
+.conversation-screen .chat-close {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Chat content area */
+.conversation-screen .chat-content {
+  flex: 1;
+  padding: 16px;
+  background: #F7F9F8; /* subtle light background */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+/* Chat bubbles */
+.conversation-screen .bubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.conversation-screen .bubble.assistant {
+  background: #E9ECEB; /* light grey */
+  color: #1D2B2A;
+  align-self: flex-start;
+  border-top-left-radius: 6px;
+}
+
+.conversation-screen .bubble.user {
+  background: #00BA8D; /* Isio green */
+  color: #FFFFFF;
+  align-self: flex-end;
+  border-top-right-radius: 6px;
+}
+
+/* Optional: message input bar */
+.conversation-screen .chat-input {
+  display: flex;
+  padding: 12px;
+  background: #FFFFFF;
+  border-top: 1px solid #E0E0E0;
+}
+.conversation-screen .chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+  margin-right: 8px;
+}
+.conversation-screen .chat-input button {
+  background: #00BA8D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}

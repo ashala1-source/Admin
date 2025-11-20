@@ -1,0 +1,17 @@
+.feedback-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #00BA8D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,186,141,0.22);
+}
+.feedback-button:hover {
+  filter: brightness(0.95);
+}

@@ -1,42 +1,144 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --isio-green: #00BA8D;
+  --card-bg: rgba(17, 60, 45, 0.88);
+  --white: #FFFFFF;
+  --text: #F5F7F6;
+  --ring: rgba(0, 186, 141, 0.3);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Feedback button */
+.feedback-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: var(--isio-green);
+  color: var(--white);
+  border: none;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 186, 141, 0.22);
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 120ms ease, filter 120ms ease;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.feedback-button:active { transform: translateY(0.5px); }
+.feedback-button:hover { filter: brightness(0.95); }
+
+/* Center selection card */
+.selector-card {
+  width: min(680px, 92vw);
+  padding: 28px 32px 32px;
+  border-radius: 20px;
+  color: var(--text);
+  background: var(--card-bg);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.25);
+  backdrop-filter: saturate(140%);
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.selector-title {
+  margin: 0 0 20px;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: 0.3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.selector-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 22px;
 }
 
-.card {
-  padding: 2em;
+/* Card-like avatar buttons (dark style) */
+.selector-option {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  gap: 10px;
+  padding: 20px 12px;
+  background: rgba(255,255,255,0.06); /* subtle glass effect */
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.selector-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border-color: var(--isio-green);
+  background: rgba(255,255,255,0.12);
+}
+.selector-option:active {
+  transform: translateY(1px); /* Press-down effect */
+}
+.selector-option.selected {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  background: rgba(255,255,255,0.18);
+  border-color: var(--isio-green);
 }
 
-.read-the-docs {
-  color: #888;
+/* Avatar hover micro-animation */
+.selector-option .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.7);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.selector-option:hover .avatar {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0,186,141,0.45);
+}
+.selector-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.option-label {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #ECF2EF;
+}
+
+/* CTA button */
+.cta {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 22px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: transform 140ms ease, filter 160ms ease, opacity 160ms ease;
+  background-image: linear-gradient(90deg, #00BA8D 0%, #00A0F3 50%, #5D3BEA 100%);
+  box-shadow: 0 12px 30px rgba(93,59,234,0.35);
+}
+.cta:hover { transform: translateY(-1px); filter: brightness(1.04); }
+.cta:active { transform: translateY(1px); }
+.cta-disabled,
+.cta:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: none;
+  transform: none;
+}
+
+/* Error message */
+.error {
+  margin-top: 14px;
+  color: #E76152;
+  font-weight: 700;
 }
