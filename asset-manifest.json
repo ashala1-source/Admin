@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Tavus-Conversation-App/static/css/main.5dedac37.css",
-    "main.js": "/Tavus-Conversation-App/static/js/main.071c1498.js",
-    "index.html": "/Tavus-Conversation-App/index.html",
-    "main.5dedac37.css.map": "/Tavus-Conversation-App/static/css/main.5dedac37.css.map",
-    "main.071c1498.js.map": "/Tavus-Conversation-App/static/js/main.071c1498.js.map"
+    "main.css": "/Admin/static/css/main.b6ee8a0f.css",
+    "main.js": "/Admin/static/js/main.d88505e3.js",
+    "index.html": "/Admin/index.html",
+    "main.b6ee8a0f.css.map": "/Admin/static/css/main.b6ee8a0f.css.map",
+    "main.d88505e3.js.map": "/Admin/static/js/main.d88505e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.5dedac37.css",
-    "static/js/main.071c1498.js"
+    "static/css/main.b6ee8a0f.css",
+    "static/js/main.d88505e3.js"
   ]
 }
